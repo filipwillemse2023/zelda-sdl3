@@ -1,0 +1,162 @@
+[
+  {
+    "bank": 6,
+    "offset": 102952,
+    "offset_in_bank": 4648,
+    "length": 40,
+    "hex": "030319100b1b19030303190303030303031703030f1a0303030316030f0317030303030303430303",
+    "preview_guess": "DDZQL1ZDDDZDDDDDDXDDP0DD"
+  },
+  {
+    "bank": 0,
+    "offset": 4400,
+    "offset_in_bank": 4400,
+    "length": 37,
+    "hex": "082e830838853626080883243624362436243622362236223622361e302a36303c3c3c4848",
+    "preview_guess": "I..I....II. . . . .8.8.8"
+  },
+  {
+    "bank": 2,
+    "offset": 40367,
+    "offset_in_bank": 7599,
+    "length": 37,
+    "hex": "2f475f770a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223626328292a2b2c",
+    "preview_guess": "....KLMNOPQRSTUVWXYZ0123"
+  },
+  {
+    "bank": 6,
+    "offset": 105400,
+    "offset_in_bank": 7096,
+    "length": 37,
+    "hex": "0f0f0f0f0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+    "preview_guess": "PPPPPGXWPGXWPHGWPHGWPPHG"
+  },
+  {
+    "bank": 6,
+    "offset": 105652,
+    "offset_in_bank": 7348,
+    "length": 37,
+    "hex": "0f0f0f0f0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+    "preview_guess": "PPPPPGXWPGXWPHGWPHGWPPHG"
+  },
+  {
+    "bank": 6,
+    "offset": 107904,
+    "offset_in_bank": 9600,
+    "length": 34,
+    "hex": "202424e224160a17222424220e0a1b1c24240a10182424191b12170c0e24e3242421",
+    "preview_guess": "6  . WKX8  8OK12  KQY  Z"
+  },
+  {
+    "bank": 6,
+    "offset": 108184,
+    "offset_in_bank": 9880,
+    "length": 34,
+    "hex": "202424e224110a0d242418170e24180f241d110e241d1b120f181b0c0e24e3242422",
+    "preview_guess": "6  . RKN  YXO YP 3RO 31S"
+  },
+  {
+    "bank": 6,
+    "offset": 108464,
+    "offset_in_bank": 10160,
+    "length": 34,
+    "hex": "202424e2241c110e24200a1c240c0a191d1e1b0e0d632424242424242424e3242423",
+    "preview_guess": "6  . 2RO 6K2 MKZ341ON.  "
+  },
+  {
+    "bank": 0,
+    "offset": 4317,
+    "offset_in_bank": 4317,
+    "length": 33,
+    "hex": "832c3a2c3a2c3a2c3a2a3a2a3a2a3a2a3a283a283a283a283a263a263a263a263a",
+    "preview_guess": "........................"
+  },
+  {
+    "bank": 2,
+    "offset": 38225,
+    "offset_in_bank": 5457,
+    "length": 33,
+    "hex": "200f3030300f2130300f1630300f291a090f2937170f0222300f1627300f0b1b2b",
+    "preview_guess": "6P...P7..PW..P.0JP..XPC8"
+  },
+  {
+    "bank": 6,
+    "offset": 103388,
+    "offset_in_bank": 5084,
+    "length": 33,
+    "hex": "0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+    "preview_guess": "PGXWPGXWPHGWPHGWPPHGPPHG"
+  },
+  {
+    "bank": 6,
+    "offset": 103544,
+    "offset_in_bank": 5240,
+    "length": 33,
+    "hex": "0f0c1c2c0f121c2c0f0c0c1c0f110c1c0f0f0c0c0f020c0c0f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PM2.PS2.PMM2PRM2PPMMPCMM"
+  },
+  {
+    "bank": 6,
+    "offset": 103796,
+    "offset_in_bank": 5492,
+    "length": 33,
+    "hex": "0f0212220f1612220f0102120f1702120f0f01020f0601020f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PCS8PWS8PBCSPXCSPPBCPGBC"
+  },
+  {
+    "bank": 6,
+    "offset": 104048,
+    "offset_in_bank": 5744,
+    "length": 33,
+    "hex": "0f0b1b2b0f161b2b0f0b0b1b0f170b1b0f0f0b0b0f060b0b0f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PL1.PW1.PLL1PXL1PPLLPGLL"
+  },
+  {
+    "bank": 6,
+    "offset": 104300,
+    "offset_in_bank": 5996,
+    "length": 33,
+    "hex": "0f0818280f1218280f0808180f1108180f0f08080f0208080f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PIY.PSY.PIIYPRIYPPIIPCII"
+  },
+  {
+    "bank": 6,
+    "offset": 104552,
+    "offset_in_bank": 6248,
+    "length": 33,
+    "hex": "0f0a1a2a0f161a2a0f0a0a1a0f170a1a0f0f0a0a0f060a0a0f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PK0.PW0.PKK0PXK0PPKKPGKK"
+  },
+  {
+    "bank": 6,
+    "offset": 104804,
+    "offset_in_bank": 6500,
+    "length": 33,
+    "hex": "0f0818280f1618280f0808180f1708180f0f08080f0608080f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PIY.PWY.PIIYPXIYPPIIPGII"
+  },
+  {
+    "bank": 6,
+    "offset": 105056,
+    "offset_in_bank": 6752,
+    "length": 33,
+    "hex": "0f0a1a2a0f121a2a0f0a0a1a0f110a1a0f0f0a0a0f020a0a0f0f0f0f0f0f0f0f0f",
+    "preview_guess": "PK0.PS0.PKK0PRK0PPKKPCKK"
+  },
+  {
+    "bank": 3,
+    "offset": 56635,
+    "offset_in_bank": 7483,
+    "length": 32,
+    "hex": "02020202070bfc0c020202020804f3030cfc0b070202020203f3040802020202",
+    "preview_guess": "CCCCHL.MCCCCIE.DM.LHCCCC"
+  },
+  {
+    "bank": 2,
+    "offset": 39276,
+    "offset_in_bank": 6508,
+    "length": 31,
+    "hex": "103617270f36081a2836303b2236303b163617270f36081a2836303b22390f",
+    "preview_guess": "Q.X.P.I0....8...W.X.P.I0"
+  }
+]

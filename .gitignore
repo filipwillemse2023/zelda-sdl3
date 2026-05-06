@@ -1,0 +1,36 @@
+# NES ROM (copyrighted)
+*.nes
+
+# Build output
+/build/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.exp
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# VS Code local
+.vscode/
+
+# Binary dumps (large, regeneratable from Mesen)
+/dumps/*.bin
+
+# CHR sidecar binaries (regeneratable from dumps)
+/extracted/rooms/*.chr.bin
+
+# Mesen emulator source (separate project)
+/Mesen2-master/
+
+# Python cache
+*.pyc
+__pycache__/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,1094 @@
+{
+  "room_candidates": [
+    {
+      "bank": 6,
+      "offset": 99648,
+      "offset_in_bank": 1344,
+      "score": 142.6,
+      "unique_values": 143,
+      "ff_count": 0,
+      "zero_count": 5,
+      "tile_preview": [
+        33,
+        33,
+        4,
+        47,
+        71,
+        26,
+        0,
+        0,
+        80,
+        232,
+        205,
+        196,
+        170,
+        67,
+        67,
+        171
+      ]
+    },
+    {
+      "bank": 6,
+      "offset": 99632,
+      "offset_in_bank": 1328,
+      "score": 141.44,
+      "unique_values": 142,
+      "ff_count": 0,
+      "zero_count": 7,
+      "tile_preview": [
+        33,
+        33,
+        228,
+        0,
+        79,
+        0,
+        0,
+        8,
+        232,
+        47,
+        231,
+        79,
+        10,
+        67,
+        170,
+        9
+      ]
+    },
+    {
+      "bank": 6,
+      "offset": 99600,
+      "offset_in_bank": 1296,
+      "score": 141.12,
+      "unique_values": 142,
+      "ff_count": 0,
+      "zero_count": 11,
+      "tile_preview": [
+        65,
+        228,
+        193,
+        101,
+        66,
+        228,
+        31,
+        31,
+        31,
+        31,
+        206,
+        0,
+        0,
+        218,
+        206,
+        218
+      ]
+    },
+    {
+      "bank": 6,
+      "offset": 99616,
+      "offset_in_bank": 1312,
+      "score": 140.28,
+      "unique_values": 141,
+      "ff_count": 0,
+      "zero_count": 9,
+      "tile_preview": [
+        33,
+        33,
+        2,
+        66,
+        0,
+        90,
+        218,
+        218,
+        218,
+        80,
+        207,
+        231,
+        78,
+        170,
+        73,
+        0
+      ]
+    },
+    {
+      "bank": 6,
+      "offset": 99664,
+      "offset_in_bank": 1360,
+      "score": 139.44,
+      "unique_values": 140,
+      "ff_count": 0,
+      "zero_count": 7,
+      "tile_preview": [
+        130,
+        131,
+        99,
+        162,
+        105,
+        7,
+        71,
+        105,
+        105,
+        90,
+        71,
+        99,
+        67,
+        67,
+        131,
+        170
+      ]
+    },
+    {
+      "bank": 6,
+      "offset": 99680,
+      "offset_in_bank": 1376,
+      "score": 136.32,
+      "unique_values": 138,
+      "ff_count": 0,
+      "zero_count": 21,
+      "tile_preview": [
+        228,
+        131,
+        131,
+        236,
+        170,
+        105,
+        105,
+        71,
+        71,
+        71,
+        105,
+        236,
+        68,
+        68,
+        236,
+        168
+      ]
+    }
+  ],
+  "text_candidates": [
+    {
+      "bank": 6,
+      "offset": 102952,
+      "offset_in_bank": 4648,
+      "length": 40,
+      "hex": "030319100b1b19030303190303030303031703030f1a0303030316030f0317030303030303430303",
+      "preview_guess": "DDZQL1ZDDDZDDDDDDXDDP0DD"
+    },
+    {
+      "bank": 0,
+      "offset": 4400,
+      "offset_in_bank": 4400,
+      "length": 37,
+      "hex": "082e830838853626080883243624362436243622362236223622361e302a36303c3c3c4848",
+      "preview_guess": "I..I....II. . . . .8.8.8"
+    },
+    {
+      "bank": 2,
+      "offset": 40367,
+      "offset_in_bank": 7599,
+      "length": 37,
+      "hex": "2f475f770a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223626328292a2b2c",
+      "preview_guess": "....KLMNOPQRSTUVWXYZ0123"
+    },
+    {
+      "bank": 6,
+      "offset": 105400,
+      "offset_in_bank": 7096,
+      "length": 37,
+      "hex": "0f0f0f0f0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+      "preview_guess": "PPPPPGXWPGXWPHGWPHGWPPHG"
+    },
+    {
+      "bank": 6,
+      "offset": 105652,
+      "offset_in_bank": 7348,
+      "length": 37,
+      "hex": "0f0f0f0f0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+      "preview_guess": "PPPPPGXWPGXWPHGWPHGWPPHG"
+    },
+    {
+      "bank": 6,
+      "offset": 107904,
+      "offset_in_bank": 9600,
+      "length": 34,
+      "hex": "202424e224160a17222424220e0a1b1c24240a10182424191b12170c0e24e3242421",
+      "preview_guess": "6  . WKX8  8OK12  KQY  Z"
+    },
+    {
+      "bank": 6,
+      "offset": 108184,
+      "offset_in_bank": 9880,
+      "length": 34,
+      "hex": "202424e224110a0d242418170e24180f241d110e241d1b120f181b0c0e24e3242422",
+      "preview_guess": "6  . RKN  YXO YP 3RO 31S"
+    },
+    {
+      "bank": 6,
+      "offset": 108464,
+      "offset_in_bank": 10160,
+      "length": 34,
+      "hex": "202424e2241c110e24200a1c240c0a191d1e1b0e0d632424242424242424e3242423",
+      "preview_guess": "6  . 2RO 6K2 MKZ341ON.  "
+    },
+    {
+      "bank": 0,
+      "offset": 4317,
+      "offset_in_bank": 4317,
+      "length": 33,
+      "hex": "832c3a2c3a2c3a2c3a2a3a2a3a2a3a2a3a283a283a283a283a263a263a263a263a",
+      "preview_guess": "........................"
+    },
+    {
+      "bank": 2,
+      "offset": 38225,
+      "offset_in_bank": 5457,
+      "length": 33,
+      "hex": "200f3030300f2130300f1630300f291a090f2937170f0222300f1627300f0b1b2b",
+      "preview_guess": "6P...P7..PW..P.0JP..XPC8"
+    },
+    {
+      "bank": 6,
+      "offset": 103388,
+      "offset_in_bank": 5084,
+      "length": 33,
+      "hex": "0f0617160f0617160f0706160f0706160f0f07060f0f07060f0f0f0f0f0f0f0f3f",
+      "preview_guess": "PGXWPGXWPHGWPHGWPPHGPPHG"
+    },
+    {
+      "bank": 6,
+      "offset": 103544,
+      "offset_in_bank": 5240,
+      "length": 33,
+      "hex": "0f0c1c2c0f121c2c0f0c0c1c0f110c1c0f0f0c0c0f020c0c0f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PM2.PS2.PMM2PRM2PPMMPCMM"
+    },
+    {
+      "bank": 6,
+      "offset": 103796,
+      "offset_in_bank": 5492,
+      "length": 33,
+      "hex": "0f0212220f1612220f0102120f1702120f0f01020f0601020f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PCS8PWS8PBCSPXCSPPBCPGBC"
+    },
+    {
+      "bank": 6,
+      "offset": 104048,
+      "offset_in_bank": 5744,
+      "length": 33,
+      "hex": "0f0b1b2b0f161b2b0f0b0b1b0f170b1b0f0f0b0b0f060b0b0f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PL1.PW1.PLL1PXL1PPLLPGLL"
+    },
+    {
+      "bank": 6,
+      "offset": 104300,
+      "offset_in_bank": 5996,
+      "length": 33,
+      "hex": "0f0818280f1218280f0808180f1108180f0f08080f0208080f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PIY.PSY.PIIYPRIYPPIIPCII"
+    },
+    {
+      "bank": 6,
+      "offset": 104552,
+      "offset_in_bank": 6248,
+      "length": 33,
+      "hex": "0f0a1a2a0f161a2a0f0a0a1a0f170a1a0f0f0a0a0f060a0a0f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PK0.PW0.PKK0PXK0PPKKPGKK"
+    },
+    {
+      "bank": 6,
+      "offset": 104804,
+      "offset_in_bank": 6500,
+      "length": 33,
+      "hex": "0f0818280f1618280f0808180f1708180f0f08080f0608080f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PIY.PWY.PIIYPXIYPPIIPGII"
+    },
+    {
+      "bank": 6,
+      "offset": 105056,
+      "offset_in_bank": 6752,
+      "length": 33,
+      "hex": "0f0a1a2a0f121a2a0f0a0a1a0f110a1a0f0f0a0a0f020a0a0f0f0f0f0f0f0f0f0f",
+      "preview_guess": "PK0.PS0.PKK0PRK0PPKKPCKK"
+    },
+    {
+      "bank": 3,
+      "offset": 56635,
+      "offset_in_bank": 7483,
+      "length": 32,
+      "hex": "02020202070bfc0c020202020804f3030cfc0b070202020203f3040802020202",
+      "preview_guess": "CCCCHL.MCCCCIE.DM.LHCCCC"
+    },
+    {
+      "bank": 2,
+      "offset": 39276,
+      "offset_in_bank": 6508,
+      "length": 31,
+      "hex": "103617270f36081a2836303b2236303b163617270f36081a2836303b22390f",
+      "preview_guess": "Q.X.P.I0....8...W.X.P.I0"
+    }
+  ],
+  "entity_candidates": [
+    {
+      "bank": 0,
+      "offset": 4806,
+      "offset_in_bank": 4806,
+      "triples": [
+        [
+          129,
+          36,
+          36
+        ],
+        [
+          240,
+          73,
+          0
+        ],
+        [
+          129,
+          20,
+          30
+        ],
+        [
+          40,
+          22,
+          32
+        ],
+        [
+          42,
+          24,
+          34
+        ],
+        [
+          44,
+          135,
+          46
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 6759,
+      "offset_in_bank": 6759,
+      "triples": [
+        [
+          66,
+          6,
+          60
+        ],
+        [
+          48,
+          46,
+          62
+        ],
+        [
+          68,
+          204,
+          2
+        ],
+        [
+          0,
+          131,
+          64
+        ],
+        [
+          66,
+          72,
+          74
+        ],
+        [
+          2,
+          80,
+          76
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 6768,
+      "offset_in_bank": 6768,
+      "triples": [
+        [
+          0,
+          131,
+          64
+        ],
+        [
+          66,
+          72,
+          74
+        ],
+        [
+          2,
+          80,
+          76
+        ],
+        [
+          84,
+          148,
+          86
+        ],
+        [
+          0,
+          148,
+          58
+        ],
+        [
+          62,
+          168,
+          80
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 6786,
+      "offset_in_bank": 6786,
+      "triples": [
+        [
+          138,
+          78,
+          2
+        ],
+        [
+          204,
+          74,
+          0
+        ],
+        [
+          129,
+          40,
+          62
+        ],
+        [
+          36,
+          130,
+          58
+        ],
+        [
+          129,
+          22,
+          48
+        ],
+        [
+          26,
+          130,
+          52
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 7884,
+      "offset_in_bank": 7884,
+      "triples": [
+        [
+          141,
+          15,
+          64
+        ],
+        [
+          96,
+          16,
+          28
+        ],
+        [
+          28,
+          28,
+          0
+        ],
+        [
+          3,
+          10,
+          3
+        ],
+        [
+          0,
+          24,
+          24
+        ],
+        [
+          88,
+          170,
+          106
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 8136,
+      "offset_in_bank": 8136,
+      "triples": [
+        [
+          31,
+          31,
+          30
+        ],
+        [
+          26,
+          25,
+          22
+        ],
+        [
+          19,
+          17,
+          17
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          20,
+          5,
+          40
+        ],
+        [
+          60,
+          112,
+          7
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 8145,
+      "offset_in_bank": 8145,
+      "triples": [
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          20,
+          5,
+          40
+        ],
+        [
+          60,
+          112,
+          7
+        ],
+        [
+          27,
+          53,
+          20
+        ],
+        [
+          13,
+          40,
+          60
+        ],
+        [
+          80,
+          6,
+          12
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 0,
+      "offset": 8160,
+      "offset_in_bank": 8160,
+      "triples": [
+        [
+          80,
+          6,
+          12
+        ],
+        [
+          8,
+          24,
+          36
+        ],
+        [
+          48,
+          72,
+          16
+        ],
+        [
+          7,
+          13,
+          9
+        ],
+        [
+          27,
+          36,
+          54
+        ],
+        [
+          72,
+          16,
+          60
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 16800,
+      "offset_in_bank": 416,
+      "triples": [
+        [
+          10,
+          23,
+          13
+        ],
+        [
+          36,
+          18,
+          42
+        ],
+        [
+          21,
+          21,
+          36
+        ],
+        [
+          29,
+          10,
+          21
+        ],
+        [
+          20,
+          236,
+          37
+        ],
+        [
+          37,
+          37,
+          29
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 16869,
+      "offset_in_bank": 485,
+      "triples": [
+        [
+          29,
+          17,
+          14
+        ],
+        [
+          36,
+          22,
+          24
+        ],
+        [
+          30,
+          23,
+          29
+        ],
+        [
+          10,
+          18,
+          23
+        ],
+        [
+          36,
+          10,
+          17
+        ],
+        [
+          14,
+          10,
+          13
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 16950,
+      "offset_in_bank": 566,
+      "triples": [
+        [
+          24,
+          30,
+          42
+        ],
+        [
+          27,
+          14,
+          36
+        ],
+        [
+          27,
+          18,
+          12
+        ],
+        [
+          17,
+          233,
+          37
+        ],
+        [
+          11,
+          30,
+          34
+        ],
+        [
+          36,
+          28,
+          24
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 16962,
+      "offset_in_bank": 578,
+      "triples": [
+        [
+          11,
+          30,
+          34
+        ],
+        [
+          36,
+          28,
+          24
+        ],
+        [
+          22,
+          14,
+          29
+        ],
+        [
+          17,
+          18,
+          23
+        ],
+        [
+          42,
+          36,
+          32
+        ],
+        [
+          18,
+          21,
+          21
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17007,
+      "offset_in_bank": 623,
+      "triples": [
+        [
+          21,
+          21,
+          34
+        ],
+        [
+          36,
+          14,
+          33
+        ],
+        [
+          25,
+          14,
+          23
+        ],
+        [
+          28,
+          18,
+          31
+        ],
+        [
+          14,
+          233,
+          37
+        ],
+        [
+          29,
+          10,
+          20
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17010,
+      "offset_in_bank": 626,
+      "triples": [
+        [
+          36,
+          14,
+          33
+        ],
+        [
+          25,
+          14,
+          23
+        ],
+        [
+          28,
+          18,
+          31
+        ],
+        [
+          14,
+          233,
+          37
+        ],
+        [
+          29,
+          10,
+          20
+        ],
+        [
+          14,
+          36,
+          10
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17076,
+      "offset_in_bank": 692,
+      "triples": [
+        [
+          24,
+          13,
+          34
+        ],
+        [
+          236,
+          37,
+          37
+        ],
+        [
+          37,
+          16,
+          27
+        ],
+        [
+          30,
+          22,
+          11
+        ],
+        [
+          21,
+          14,
+          40
+        ],
+        [
+          16,
+          27,
+          30
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17088,
+      "offset_in_bank": 704,
+      "triples": [
+        [
+          21,
+          14,
+          40
+        ],
+        [
+          16,
+          27,
+          30
+        ],
+        [
+          22,
+          11,
+          21
+        ],
+        [
+          14,
+          44,
+          44
+        ],
+        [
+          236,
+          37,
+          37
+        ],
+        [
+          14,
+          10,
+          28
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17151,
+      "offset_in_bank": 767,
+      "triples": [
+        [
+          18,
+          28,
+          21
+        ],
+        [
+          18,
+          20,
+          14
+        ],
+        [
+          28,
+          36,
+          28
+        ],
+        [
+          22,
+          24,
+          20
+        ],
+        [
+          14,
+          236,
+          37
+        ],
+        [
+          13,
+          18,
+          13
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17154,
+      "offset_in_bank": 770,
+      "triples": [
+        [
+          18,
+          20,
+          14
+        ],
+        [
+          28,
+          36,
+          28
+        ],
+        [
+          22,
+          24,
+          20
+        ],
+        [
+          14,
+          236,
+          37
+        ],
+        [
+          13,
+          18,
+          13
+        ],
+        [
+          36,
+          34,
+          24
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17193,
+      "offset_in_bank": 809,
+      "triples": [
+        [
+          29,
+          17,
+          14
+        ],
+        [
+          36,
+          24,
+          21
+        ],
+        [
+          13,
+          36,
+          22
+        ],
+        [
+          10,
+          23,
+          36
+        ],
+        [
+          24,
+          87,
+          37
+        ],
+        [
+          29,
+          24,
+          25
+        ]
+      ],
+      "score": 8
+    },
+    {
+      "bank": 1,
+      "offset": 17202,
+      "offset_in_bank": 818,
+      "triples": [
+        [
+          10,
+          23,
+          36
+        ],
+        [
+          24,
+          87,
+          37
+        ],
+        [
+          29,
+          24,
+          25
+        ],
+        [
+          36,
+          24,
+          15
+        ],
+        [
+          36,
+          29,
+          17
+        ],
+        [
+          14,
+          36,
+          32
+        ]
+      ],
+      "score": 8
+    }
+  ],
+  "notes": [
+    "These candidates are heuristic and intended to accelerate reverse-engineering, not to claim the original game data format is decoded.",
+    "The prototype room file is generated from the strongest 16x15 byte window found in PRG ROM."
+  ]
+}
