@@ -43,6 +43,7 @@ private:
     bool moveLeft_ = false;
     bool moveRight_ = false;
     float transitionCooldown_ = 0.0F;
+    bool doorTriggerReleased_ = true;
 
     bool playerUsesSprite_ = false;
     std::uint8_t playerTileTopLeft_ = 0;

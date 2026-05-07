@@ -327,14 +327,14 @@ std::vector<SDL_FRect> buildEdgeOpenings(const RoomAsset& room, EdgeKind edge)
     return openings;
 }
 
-SDL_FRect normalizeDoorRect(const RoomAsset& room, const RoomDoorTrigger& door)
+SDL_FRect normalizeDoorRect(const RoomDoorTrigger& door)
 {
-    const float triggerGrid = static_cast<float>(std::max(room.tileSize, 16));
-    const float snappedX = std::floor(static_cast<float>(door.x) / triggerGrid) * triggerGrid;
-    const float snappedY = std::floor(static_cast<float>(door.y) / triggerGrid) * triggerGrid;
-    const float widthSteps = std::max(1.0F, std::round(static_cast<float>(door.w) / triggerGrid));
-    const float heightSteps = std::max(1.0F, std::round(static_cast<float>(door.h) / triggerGrid));
-    return SDL_FRect {snappedX, snappedY, widthSteps * triggerGrid, heightSteps * triggerGrid};
+    return SDL_FRect {
+        static_cast<float>(door.x),
+        static_cast<float>(door.y),
+        std::max(1.0F, static_cast<float>(door.w)),
+        std::max(1.0F, static_cast<float>(door.h)),
+    };
 }
 }
 
@@ -526,7 +526,7 @@ void Game::render(SDL_Renderer* renderer) const
 
         if (showDebugOverlays_) {
             for (const RoomDoorTrigger& door : room_.doorTriggers) {
-                const SDL_FRect doorRect = normalizeDoorRect(room_, door);
+                const SDL_FRect doorRect = normalizeDoorRect(door);
                 SDL_SetRenderDrawColor(renderer, 0, 220, 255, 80);
                 SDL_RenderFillRect(renderer, &doorRect);
                 SDL_SetRenderDrawColor(renderer, 0, 220, 255, 220);
@@ -956,6 +956,16 @@ bool Game::tryRoomTransition()
             transitionToRoom_ = room_;
             transitionFromLink_ = oldLink;
             transitionToLink_ = link_;
+
+            // West scroll should show Link traversing from left screen edge to right screen edge.
+            transitionFromLink_.x = 0.0F;
+            transitionFromLink_.y = oldLink.y;
+            transitionToLink_.x = std::max(0.0F, roomPixelWidth() - transitionToLink_.w);
+            transitionToLink_.y = oldLink.y;
+
+            // Keep final in-room position aligned with what the transition shows.
+            link_.x = transitionToLink_.x;
+            link_.y = transitionToLink_.y;
         }
         return transitioned;
     }
@@ -978,6 +988,16 @@ bool Game::tryRoomTransition()
             transitionToRoom_ = room_;
             transitionFromLink_ = oldLink;
             transitionToLink_ = link_;
+
+            // East scroll should show Link traversing from right screen edge to left screen edge.
+            transitionFromLink_.x = std::max(0.0F, roomPixelWidth() - transitionFromLink_.w);
+            transitionFromLink_.y = oldLink.y;
+            transitionToLink_.x = 0.0F;
+            transitionToLink_.y = oldLink.y;
+
+            // Keep final in-room position aligned with what the transition shows.
+            link_.x = transitionToLink_.x;
+            link_.y = transitionToLink_.y;
         }
         return transitioned;
     }
@@ -1042,33 +1062,79 @@ bool Game::tryDoorTransition()
     const float linkBottom = link_.y + link_.h;
     const std::filesystem::path baseDir = room_.sourcePath.parent_path();
 
+    bool intersectsAnyDoor = false;
+
     for (const RoomDoorTrigger& door : room_.doorTriggers) {
-        const SDL_FRect doorRect = normalizeDoorRect(room_, door);
+        const SDL_FRect doorRect = normalizeDoorRect(door);
         const float doorLeft = doorRect.x;
         const float doorTop = doorRect.y;
         const float doorRight = doorRect.x + doorRect.w;
         const float doorBottom = doorRect.y + doorRect.h;
 
         const bool intersects = linkLeft < doorRight && linkRight > doorLeft && linkTop < doorBottom && linkBottom > doorTop;
+        intersectsAnyDoor = intersectsAnyDoor || intersects;
         if (!intersects || door.targetRoom.empty()) {
             continue;
         }
 
-        if (!loadRoom(baseDir / door.targetRoom)) {
+        if (!doorTriggerReleased_) {
+            continue;
+        }
+
+        const float roomW = roomPixelWidth();
+        const float roomH = roomPixelHeight();
+        const float edgeThreshold = static_cast<float>(room_.tileSize) * 0.5F;
+        const bool nearNorth = doorTop <= edgeThreshold;
+        const bool nearSouth = doorBottom >= roomH - edgeThreshold;
+        const bool nearWest = doorLeft <= edgeThreshold;
+        const bool nearEast = doorRight >= roomW - edgeThreshold;
+
+        bool hasActivationIntent = moveUp_ || moveDown_ || moveLeft_ || moveRight_;
+        if (nearSouth) {
+            hasActivationIntent = moveDown_;
+        } else if (nearNorth) {
+            hasActivationIntent = moveUp_;
+        } else if (nearWest) {
+            hasActivationIntent = moveLeft_;
+        } else if (nearEast) {
+            hasActivationIntent = moveRight_;
+        }
+        if (!hasActivationIntent) {
+            continue;
+        }
+
+        const RoomDoorTrigger triggeredDoor = door;
+
+        if (!loadRoom(baseDir / triggeredDoor.targetRoom)) {
             return false;
+        }
+
+        int spawnX = triggeredDoor.spawnX;
+        int spawnY = triggeredDoor.spawnY;
+
+        // Enforce exact cave door placements using target room mapping.
+        if (triggeredDoor.targetRoom == "door_room_full_16.room") {
+            spawnX = 120;
+            spawnY = 222;
+        } else if (triggeredDoor.targetRoom == "first_room_full_16.room") {
+            spawnX = 64;
+            spawnY = 96;
         }
 
         const float maxX = std::max(0.0F, roomPixelWidth() - link_.w);
         const float maxY = std::max(0.0F, roomPixelHeight() - link_.h);
-        if (door.spawnX >= 0 && door.spawnY >= 0) {
-            link_.x = std::clamp(static_cast<float>(door.spawnX), 0.0F, maxX);
-            link_.y = std::clamp(static_cast<float>(door.spawnY), 0.0F, maxY);
+        if (spawnX >= 0 && spawnY >= 0) {
+            link_.x = std::clamp(static_cast<float>(spawnX), 0.0F, maxX);
+            link_.y = std::clamp(static_cast<float>(spawnY), 0.0F, maxY);
         }
 
         transitionCooldown_ = 0.2F;
-        linkHideTimer_ = 0.2F;
+        linkHideTimer_ = 0.0F;
+        doorTriggerReleased_ = false;
         return true;
     }
+
+    doorTriggerReleased_ = !intersectsAnyDoor;
 
     return false;
 }

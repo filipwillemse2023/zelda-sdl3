@@ -85,5 +85,5 @@ entities:
 128,152,sprite_19_bottom,15,0,0,0
 45,52,sprite_21_top,62,0,0,0
 45,60,sprite_21_bottom,63,0,0,0
-door_tiles:
-8,10,door_room_full_16.room,120,208
+doors:
+64,80,16,16,door_room_full_16.room,120,222

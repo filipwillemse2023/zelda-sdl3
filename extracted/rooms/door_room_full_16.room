@@ -73,25 +73,7 @@ tile_palettes:
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 entities:
-112,216,sprite_18_top,14,0,1,0
-112,224,sprite_18_bottom,15,0,1,0
-120,216,sprite_19_top,12,0,1,0
-120,224,sprite_19_bottom,13,0,1,0
 45,52,sprite_21_top,62,0,0,0
 45,60,sprite_21_bottom,63,0,0,0
-168,129,sprite_38_top,92,2,0,0
-168,137,sprite_38_bottom,93,2,0,0
-72,129,sprite_39_top,92,2,0,0
-72,137,sprite_39_bottom,93,2,0,0
-120,129,sprite_40_top,152,2,0,0
-120,137,sprite_40_bottom,153,2,0,0
-124,153,sprite_41_top,32,0,0,0
-124,161,sprite_41_bottom,33,0,0,0
-80,129,sprite_56_top,94,2,0,0
-80,137,sprite_56_bottom,95,2,0,0
-176,129,sprite_57_top,94,2,0,0
-176,137,sprite_57_bottom,95,2,0,0
-128,129,sprite_63_top,152,2,1,0
-128,137,sprite_63_bottom,153,2,1,0
 doors:
-112,232,32,8,first_room_full_16.room,120,112
+112,238,32,2,first_room_full_16.room,64,96
