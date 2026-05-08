@@ -19,7 +19,8 @@ python tools/import_mesen_scene.py --nametable dumps/first_room_nametable.bin --
 Recommended defaults for reproducible room captures:
 
 - Use `--oam-mode none` to avoid importing transient enemy/player snapshots from a paused frame.
-- Use `--oam-mode snapshot` only when you explicitly want a static sprite snapshot from that exact frame.
+- Use `--oam-mode snapshot` only when you explicitly want a full static sprite snapshot from that exact frame.
+- Use `--oam-mode player-only` to import only the player character near the screen center.
 - Keep `--sprite-height` aligned with emulator state (8 or 16) when snapshot mode is used.
 
 ## Mesen-Oriented Workflow
@@ -46,7 +47,8 @@ python tools/import_mesen_scene.py --nametable dumps/first_room_nametable.bin --
 ## Current Limits
 
 - OAM import supports both `--sprite-height 8` and `--sprite-height 16` modes.
-- OAM behavior is configurable with `--oam-mode snapshot|none`.
+- OAM behavior is configurable with `--oam-mode snapshot|player-only|none`.
+- Player-only mode detects center-screen sprites as likely player character candidates.
 - The importer currently models a top-left 16x15 room crop of the active nametable.
 - Attribute-derived palettes are expanded to per-tile palette IDs for the top-left 16x15 room crop.
 

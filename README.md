@@ -32,7 +32,7 @@ python tools/import_mesen_scene.py --nametable dumps/first_room_nametable.bin --
 ```
 
 For deterministic room imports that do not include transient paused-frame sprites, keep `--oam-mode none`.
-Use `--oam-mode snapshot` only when you want a static sprite snapshot imported from OAM.
+Use `--oam-mode snapshot` to import all visible sprite snapshots, or `--oam-mode player-only` to import only the player character.
 
 Run a specific captured room directly:
 

@@ -42,9 +42,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--oam", type=Path, help="Raw OAM dump, 256 bytes")
     parser.add_argument(
         "--oam-mode",
-        choices=["snapshot", "none"],
+        choices=["snapshot", "player-only", "none"],
         default="snapshot",
-        help="How to interpret OAM data: snapshot imports visible sprites, none ignores OAM",
+        help="How to interpret OAM data: snapshot imports all visible sprites, player-only imports only center-screen player, none ignores OAM",
     )
     parser.add_argument(
         "--oam-max-entities",
@@ -140,7 +140,17 @@ def extract_palette(palette_bytes: bytes) -> list[list[tuple[int, int, int]]]:
     return groups
 
 
-def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int, max_entities: int) -> list[str]:
+def is_likely_player_sprite(x: int, y: int) -> bool:
+    """Detect if sprite is likely the player character based on screen position.
+    
+    Player sprite is typically rendered on screen.
+    Keep sprites within reasonable playfield bounds: [50,200] x [40,190].
+    """
+    # Keep sprites that are reasonably on-screen and not at extreme edges
+    return (50 <= x <= 200) and (40 <= y <= 190)
+
+
+def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int, max_entities: int, mode: str = "snapshot") -> list[str]:
     if len(oam_bytes) < 256:
         raise ValueError("OAM dump must contain 256 bytes")
 
@@ -157,6 +167,10 @@ def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int, max_entities
 
         screen_y = y + 1
         if x >= ROOM_WIDTH * 16 or screen_y >= ROOM_HEIGHT * 16:
+            continue
+
+        # In player-only mode, filter to likely player sprites
+        if mode == "player-only" and not is_likely_player_sprite(x, screen_y):
             continue
 
         palette_index = attr & 0x03
@@ -263,8 +277,8 @@ def main() -> int:
     if args.oam_mode == "none":
         entities = []
     elif args.oam:
-        max_entities = max(args.oam_max_entities, 0)
-        entities = extract_entities_from_oam(args.oam.read_bytes(), sprite_height, max_entities)
+        max_entities = max(args.oam_max_entities, 0) if args.oam_mode == "snapshot" else 1
+        entities = extract_entities_from_oam(args.oam.read_bytes(), sprite_height, max_entities, args.oam_mode)
     else:
         entities = []
 
