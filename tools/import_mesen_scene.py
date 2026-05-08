@@ -40,6 +40,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--attribute", type=Path, help="Raw attribute table dump, 64 bytes")
     parser.add_argument("--chr", type=Path, help="Raw CHR RAM dump to copy alongside the room asset")
     parser.add_argument("--oam", type=Path, help="Raw OAM dump, 256 bytes")
+    parser.add_argument(
+        "--oam-mode",
+        choices=["snapshot", "none"],
+        default="snapshot",
+        help="How to interpret OAM data: snapshot imports visible sprites, none ignores OAM",
+    )
+    parser.add_argument(
+        "--oam-max-entities",
+        type=int,
+        default=24,
+        help="Maximum entities written from OAM when --oam-mode snapshot is active",
+    )
     parser.add_argument("--sprite-height", type=int, choices=[8, 16], default=8, help="Sprite height mode used when decoding OAM")
     parser.add_argument("--bg-pattern-base", type=int, choices=[0, 4096], default=0, help="Background CHR pattern table base ($0000 or $1000)")
     parser.add_argument("--sprite-pattern-base", type=int, choices=[0, 4096], default=0, help="Sprite CHR pattern table base ($0000 or $1000, 8x8 mode)")
@@ -128,7 +140,7 @@ def extract_palette(palette_bytes: bytes) -> list[list[tuple[int, int, int]]]:
     return groups
 
 
-def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int) -> list[str]:
+def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int, max_entities: int) -> list[str]:
     if len(oam_bytes) < 256:
         raise ValueError("OAM dump must contain 256 bytes")
 
@@ -159,7 +171,7 @@ def extract_entities_from_oam(oam_bytes: bytes, sprite_height: int) -> list[str]
             entities.append(f"{x},{screen_y},sprite_{index:02d}_top,{top_tile},{palette_index},{flip_h},{flip_v}")
             entities.append(f"{x},{screen_y + 8},sprite_{index:02d}_bottom,{bottom_tile},{palette_index},{flip_h},{flip_v}")
 
-        if len(entities) >= 24:
+        if len(entities) >= max_entities:
             break
 
     return entities
@@ -248,7 +260,13 @@ def main() -> int:
     tiles = extract_tiles(nametable_bytes)
     palette = extract_palette(palette_bytes)
     tile_palettes = expand_attributes(attribute_bytes)
-    entities = extract_entities_from_oam(args.oam.read_bytes(), sprite_height) if args.oam else []
+    if args.oam_mode == "none":
+        entities = []
+    elif args.oam:
+        max_entities = max(args.oam_max_entities, 0)
+        entities = extract_entities_from_oam(args.oam.read_bytes(), sprite_height, max_entities)
+    else:
+        entities = []
 
     chr_relative_path = None
     if args.chr:
@@ -275,6 +293,8 @@ def main() -> int:
         "attribute": str(args.attribute) if args.attribute else "embedded in nametable dump",
         "chr": str(args.chr) if args.chr else None,
         "oam": str(args.oam) if args.oam else None,
+        "oam_mode": args.oam_mode,
+        "oam_max_entities": args.oam_max_entities,
         "metadata": str(metadata_path) if metadata_path else None,
         "sprite_height": sprite_height,
         "bg_pattern_base": bg_pattern_base,
